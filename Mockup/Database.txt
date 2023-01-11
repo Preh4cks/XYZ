@@ -1,0 +1,27 @@
+Author
+    id int auto-increment required
+    first_name required string
+    middle_name string
+    last_name required string
+    Books_id many_to_many
+    created_at datetime
+    updated_at datetime
+
+Book 
+    id int auto_increment required
+    Publisher_id many_to_many required
+    title required string
+    isbn required string 
+    price required 
+    publication_year required
+    image string 
+    edition string 
+    created_at datetime
+    updated_at datetime
+
+Publisher 
+    id int auto_increment required
+    Books_id many_to_many
+    first_name required string
+    last_name required string
+    middle_name string
