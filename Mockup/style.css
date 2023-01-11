@@ -1,0 +1,222 @@
+/* Lexend Font Family */
+@font-face {
+    font-family: Lexend;
+    src: url(../Assets/font/Lexend-ExtraLight.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: Lexend;
+    src: url(../Assets/font/Lexend-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: Lexend;
+    src: url(../Assets/font/Lexend-Thin.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Lexend;
+    src: url(../Assets/font/Lexend-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Lexend;
+    src: url(../Assets/font/Lexend-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Lexend;
+    src: url(../Assets/font/Lexend-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Lexend;
+    src: url(../Assets/font/Lexend-ExtraBold.ttf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: Caveat;
+    src: url(../Assets/font/Caveat-Bold.ttf);
+}
+
+/* Variable Colors */
+:root {
+    --navy_blue: rgb(21, 28, 85);
+    --purple: rgb(97, 96, 246);
+    --sky_blue: rgb(95, 210, 250);
+    --yellow: rgb(246, 198, 68);
+}
+
+/* Reset Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend';
+    font-size: 12px;
+    /* outline: 1px solid red; */
+    text-decoration: none;
+    font-family: 'Lexend';
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+/* Global Styling */
+
+/* Container */
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* Logo */
+.xyz_logo {
+    display: inline-block;
+}
+    .xyz_logo > img {
+        height: 40px;
+    }
+    .xyz_logo > span {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 40px;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-left: 10px;
+        color: black;
+    }
+
+/* Placeholder */
+::placeholder {
+    opacity: .7;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+/* CTA Purple Button */
+.cta_purple {
+    background-color: var(--purple);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.cta_purple:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.141);
+}
+
+/* Discount Banner */
+#discount_banner {
+    background: url("../Assets/discount_banner.png");
+    background-position: center center;
+    background-size: cover;
+    padding: 5px 0;
+}
+    #discount_banner > .container {
+        width: max-content;
+    }
+        #discount_banner > .container > h3 {
+            display: inline-block;
+            margin: 0 5px 4px 5px;
+            color: white;
+            font-weight: 300;
+            vertical-align: text-bottom;
+        }
+        #discount_banner > .container > img {
+            width: 30px;
+        }
+        #discount_banner > .container > img:first-child {
+            transform: scaleX(-1);
+        }
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    padding: 25px 0px;
+}
+    nav > div {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+    }
+        /* Search Bar */
+        nav > div > .search_bar {
+            border: 2px solid var(--purple);
+            border-radius: 30px;
+            vertical-align: super;
+            font-family: 'Lexend';
+            width: 25%;
+            height: 40px;
+        }
+            nav > div > .search_bar > img {
+                padding: 4px;
+                margin: 5px 0px 0px 10px;
+            }
+            nav > div > .search_bar > input {
+                border: none;
+                width: 75%;
+                padding: 9px 10px;
+                vertical-align: top;
+                font-weight: 400;
+                font-size: 1.1rem;
+            }
+        /* Navigation Menu */
+        nav > div > #nav_menu {
+            width: max-content;
+            display: flex;
+        }
+            nav > div > #nav_menu > a {
+                display: block;
+                color: black;
+                padding: 0 15px;
+                font-weight: 600;
+                line-height: 40px;
+                font-size: 1.1rem;
+            }
+            nav > div > #nav_menu > a:hover {
+                color: var(--purple);
+            }
+            nav > div > #nav_menu > #language {
+                padding: 0 15px;
+                display: block;
+                color: black;
+                line-height: 20px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                border-left: 1px solid rgba(0, 0, 0, 0.112);
+                height: 20px;
+                margin-top: 10px;
+            }
+                nav > div > #nav_menu > #language > img {
+                    width: 15px;
+                    margin: 2px 0;
+                }
+                nav > div > #nav_menu > #language > span {
+                    margin: 0 2px;
+                    vertical-align: super;
+                }
+            nav > div > #nav_menu > .cta_holder {
+                position: relative;
+            }
+                nav > div > #nav_menu > .cta_holder > img {
+                    position: absolute;
+                    left: 20px;
+                    bottom: -40px;
+                    width: 40px;
+                }
+                nav > div > #nav_menu > .cta_holder > p {
+                    position: absolute;
+                    font-family: 'Caveat';
+                    font-size: 1.5rem;
+                    width: 120px;
+                    text-align: end;
+                    left: -110px;
+                    bottom: -80px;
+                    color: var(--sky_blue);
+                    transform: rotate(-10deg);
+                }
