@@ -1,0 +1,119 @@
+Landing Page
+    Discount Banner
+    Navigation Bar
+        Logo
+        Search Bar
+        Menu
+            Home
+            Rent Textbooks
+            Buy Textbooks
+            Sell Textbooks
+        Language
+        CTA - Contact
+            Floating Text 
+
+    Hero
+        Column 1
+            Title
+            Sub Title
+            Description
+            CTA - Get Started
+        Column 2
+            Hero Image
+
+    Section 1 - Commitment
+        Column 1
+            Section Image
+        Column 2
+            Title
+            Description 
+            CTA - Learn More
+
+    Section 2 - Client Logos
+        Title
+        Logos 
+            Logo 
+            Text
+
+    Section 3
+        Title
+        Description
+        Products
+            Image
+            Title
+            Link
+        Floating Text
+
+    Section 4
+        Sub Title
+        Title
+        Cards
+            Icon
+            Title
+                Description
+
+    Testimonials
+        Name
+        Position, Company
+        Company logo, Name 
+        Card 
+            Profile Image 
+            Message
+            Stars
+    
+    FAQ Section
+        Title
+        Question List 
+            Question Dropdown
+                Answer
+    
+    Footer
+        Column 1
+            Logo
+            Description
+            Email Form
+        Column 2
+            Quicklinks
+                Menu 
+                    Shop All
+                    About Us
+                    Community
+                    FAQs
+                Support
+                    Shipping & Returns
+                    Help & FAQ
+                    Terms & Conditions
+                    Privacy Policy
+                    Contact
+                    Login
+                Resources
+                    Shipping & Returns
+                    Help & FAQ 
+                    Terms & Conditions
+                    Privacy Policy
+                    Contact
+                    Login 
+
+    Bottom Section
+        Citation
+        Social Media Links
+
+    Floating Chatbot
+
+
+
+Landing Page
+    Discount Banner
+    Navigation Bar
+
+    Title 
+    Details Section
+        Column 1
+            Book Image 
+        Column 2
+            Book Title
+            Authors
+            More Details 
+
+    Footer
+
