@@ -60,7 +60,7 @@
     font-family: 'Lexend';
 }
 
-html, body {
+html {
     overflow-x: hidden;
 }
 
@@ -274,7 +274,6 @@ nav {
     }
         #hero > .row:first-child > .column {
             width: 45%;
-            overflow-x: visible;
         }
             #hero > .row:first-child > .column > * {
                 margin-bottom: 30px;
@@ -376,13 +375,15 @@ section > .row {
 /* Explore Section */
 .section_2 {
     position: relative;
+    overflow: hidden;
 }
-.slant_background {
+.section_2:before,.section_2:after{
+    content:"";
     background-color: var(--night_sky);
     width: 200%;
-    height: 1000px;
+    height: 750px;
     position: absolute;
-    top: 66%;
+    top: 40%;
     left: -10%;
     transform: rotate(-3deg);
     z-index: -1;
@@ -459,6 +460,44 @@ section > .row {
                 transform: rotate(-10deg);
             }
             
+/* Reason Section */
+#reason > span {
+    color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+#reason > h2 {
+    color: var(--gold);
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+    #reason > .reason_container {
+        display: flex;
+        justify-content: space-between;
+    }
+        #reason > .reason_container > .reason_card {
+            width: 30%;
+        }
+            #reason > .reason_container > .reason_card > img {
+                width: 50px;
+                margin-bottom: 20px;
+            }
+            #reason > .reason_container > .reason_card > h3 {
+                color: white;
+                font-size: 1.6rem;
+                max-width: 90%;
+                margin-bottom: 20px;
+            }
+            #reason > .reason_container > .reason_card > p {
+                color: white;
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+                line-height: 20px;
+                font-weight: 500;
+            }
 
 /* Tablet/Square Monitor Breakpoint */
 @media (max-width: 1140px) {
@@ -630,7 +669,7 @@ section > .row {
         padding-bottom: 30px;
     }
 
-    /* Section */
+    /* Section Explore */
     #explore {
         padding-top: 50px;
     }
@@ -642,4 +681,40 @@ section > .row {
     #explore > .book_container > .tooltip > p {
         width: 100px;
     }
+
+    .section_2:before,.section_2:after {
+        top: 24%;
+        height: 1000px;
+    }
+    /* Section Reason */
+    #reason {
+        margin-top: 20px;
+    }
+    #reason > span, #reason > h2 {
+        max-width: fit-content;
+        margin: auto;
+        display: block;
+    }
+    #reason > .reason_container {
+        display: block;
+    }
+    #reason > .reason_container  > .reason_card  {
+        width: 70%;
+        margin: 20px auto;
+    }
+        #reason > .reason_container  > .reason_card > img {
+            max-width: max-content;
+            display: block;
+            margin: 20px auto;
+        }
+        #reason > .reason_container  > .reason_card > p {
+            max-width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+        #reason > .reason_container  > .reason_card > h3 {
+            text-align: center;
+            max-width: max-content;
+            margin: auto;
+        }
 }
