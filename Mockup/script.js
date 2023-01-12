@@ -21,14 +21,14 @@ $(document).ready(() => {
 function toggleElements() {
     if($(window).width() < 768 && !($('.clicked')[0])) {
         $('.cta_holder > p, .cta_holder > img').show()
-        $('.gradient_background').show();
+        $('.gradient_background, section').show();
     } else if($(window).width() < 768 && $('.clicked')[0]) {
-        $('.gradient_background').hide();
+        $('.gradient_background, section').hide();
         $('.clicked').show();
         $('.cta_holder > p, .cta_holder > img').hide()
     } else if($(window).width() >= 768 && $('.clicked')[0]) {
         $('.clicked').removeClass('clicked');
-        $('.gradient_background').show();
+        $('.gradient_background, section').show();
         $('.cta_holder > p, .cta_holder > img').show()
     }
 }

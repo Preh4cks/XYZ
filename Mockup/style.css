@@ -44,7 +44,7 @@
     --navy_blue: rgb(21, 28, 85);
     --purple: rgb(97, 96, 246);
     --sky_blue: rgb(95, 210, 250);
-    --yellow: rgb(246, 198, 68);
+    --gold: rgb(246, 198, 68);
 }
 
 /* Reset Default */
@@ -68,6 +68,10 @@ input:focus, textarea:focus, select:focus{
 .container {
     max-width: 1140px;
     margin: auto;
+}
+
+section {
+    padding-bottom: 100px;
 }
 
 /* Logo */
@@ -106,6 +110,22 @@ input:focus, textarea:focus, select:focus{
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 .cta_purple:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.141);
+}
+
+/* CTA Dark Button */
+.cta_dark {
+    background-color: var(--navy_blue);
+    color: var(--sky_blue);
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.cta_dark:hover {
     cursor: pointer;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.141);
 }
@@ -179,7 +199,7 @@ nav {
         }
             nav #nav_menu > a {
                 display: block;
-                color: black;
+                color: var(--navy_blue);
                 padding: 0 15px;
                 font-weight: 600;
                 line-height: 40px;
@@ -191,7 +211,7 @@ nav {
             nav #nav_menu > #language {
                 padding: 0 15px;
                 display: block;
-                color: black;
+                color: var(--navy_blue);
                 line-height: 20px;
                 font-weight: 600;
                 font-size: 1.1rem;
@@ -253,7 +273,7 @@ nav {
             }
             /* Hero Title */
             #hero > .row:first-child > .column > .hero_title {
-                font-size: 4rem;
+                font-size: 4.2rem;
                 width: 80%;
                 color: var(--navy_blue);
                 line-height: 50px;
@@ -281,6 +301,38 @@ nav {
                 width: 120%;
             }
 
+/* Commitment Section */
+section > .row {
+    display: flex;
+    justify-content: space-between;
+}
+    section > .row > .column {
+        width: 47%;
+        color: white;
+    }
+        section > .row > .column > img {
+            width: 95%;
+            margin: auto;
+        }
+        section > .row > .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+            section > .row > .column > .text-container > h2 {
+                font-size: 2.8rem;
+            }
+            section > .row > .column > .text-container > p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                line-height: 22px;
+                max-width: 80%;
+            }
+            section > .row > .column > .text-container > * {
+                margin-bottom: 15px;
+            }
+
+
 /* Tablet/Square Monitor Breakpoint */
 @media (max-width: 1140px) {
     /* Global */
@@ -305,6 +357,9 @@ nav {
 
 /* Mobile Breakpoint */
 @media (max-width: 768px) {
+    ::placeholder {
+        font-size: 2rem;
+    }
     /* Navigation Menu */
     nav #nav_menu > a, nav .search_bar { 
         display: none;
@@ -403,6 +458,27 @@ nav {
                 width: 70%;
             }
         #hero > .row > .column > img {
+            width: 80%;
+        }
+
+    /* Section */
+    section > .row {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+        section > .row > .column {
+            width: 100%;
+            text-align: center;
+        }
+        section > .row > .column > .text-container {
+            width: 100%;
+            margin: 10px auto;
+        }
+        section > .row > .column > .text-container > p {
+            width: 70%;
+            margin: 10px auto;
+        }
+        section > .row > .column > img {
             width: 80%;
         }
 }
