@@ -133,7 +133,7 @@ section {
 /* Gradient Purple Background */
 .gradient_background {
     background: url("../Assets/gradient_background.png");
-    /* background-position: center center; */
+    background-position: 80% 40%;
     background-size: cover;
 }
 
@@ -141,6 +141,7 @@ section {
 #discount_banner {
     background: url("../Assets/discount_banner.png");
     background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 5px 0;
 }
@@ -164,6 +165,7 @@ section {
 /* Navigation Bar */
 nav {
     padding: 25px 0px;
+    background-color: rgb(252, 252, 252);
 }
     nav > div {
         display: flex;
@@ -280,8 +282,8 @@ nav {
             }
             /* Hero SubTitle */
             #hero > .row:first-child > .column > .hero_subtitle {
-                font-size: 1.6rem;
-                width: 55%;
+                font-size: 1.8rem;
+                width: 60%;
                 color: var(--purple);
             }
             /* Hero Description */
@@ -321,6 +323,7 @@ section > .row {
         }
             section > .row > .column > .text-container > h2 {
                 font-size: 2.8rem;
+                font-weight: 500;
             }
             section > .row > .column > .text-container > p {
                 font-size: 1.1rem;
@@ -332,6 +335,36 @@ section > .row {
                 margin-bottom: 15px;
             }
 
+/* Clients Section */
+#clients > .title {
+    color: white;
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+    #clients > .title > span{
+        color: var(--gold);
+        font-size: 2.8rem;
+    }
+#clients > .logo_container {
+    display: flex;
+}
+    #clients > .logo_container > .logo {
+        min-width: 16.6%;
+        text-align: center;
+    }
+        #clients > .logo_container > .logo  > img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+        #clients > .logo_container > .logo  > span {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: white;
+            margin-left: 8px;
+        }
 
 /* Tablet/Square Monitor Breakpoint */
 @media (max-width: 1140px) {
@@ -461,7 +494,7 @@ section > .row {
             width: 80%;
         }
 
-    /* Section */
+    /* Section Commitment */
     section > .row {
         flex-direction: column-reverse;
         width: 100%;
@@ -481,4 +514,25 @@ section > .row {
         section > .row > .column > img {
             width: 80%;
         }
+
+    /* Section Clients */
+    #clients > .logo_container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+        margin: auto;
+    }
+        #clients > .logo_container > .logo {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 30%;
+            margin: 10px 5px;
+        }
+        #clients > .logo_container > .logo > img {
+            display: block;
+            margin: auto;
+        }
+    section {
+        padding-bottom: 0px;
+    }
 }
