@@ -98,16 +98,23 @@ input:focus, textarea:focus, select:focus{
 .cta_purple {
     background-color: var(--purple);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 10px;
     border: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 .cta_purple:hover {
     cursor: pointer;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.141);
+}
+
+/* Gradient Purple Background */
+.gradient_background {
+    background: url("../Assets/gradient_background.png");
+    /* background-position: center center; */
+    background-size: cover;
 }
 
 /* Discount Banner */
@@ -136,7 +143,6 @@ input:focus, textarea:focus, select:focus{
 
 /* Navigation Bar */
 nav {
-    width: 100%;
     padding: 25px 0px;
 }
     nav > div {
@@ -145,32 +151,33 @@ nav {
         height: 40px;
     }
         /* Search Bar */
-        nav > div > .search_bar {
+        nav .search_bar {
             border: 2px solid var(--purple);
             border-radius: 30px;
             vertical-align: super;
             font-family: 'Lexend';
-            width: 25%;
+            width: 23%;
             height: 40px;
         }
-            nav > div > .search_bar > img {
+            nav .search_bar > img {
                 padding: 4px;
                 margin: 5px 0px 0px 10px;
             }
-            nav > div > .search_bar > input {
+            nav .search_bar > input {
                 border: none;
                 width: 75%;
                 padding: 9px 10px;
                 vertical-align: top;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 1.1rem;
+                background-color: transparent;
             }
         /* Navigation Menu */
-        nav > div > #nav_menu {
+        nav #nav_menu {
             width: max-content;
             display: flex;
         }
-            nav > div > #nav_menu > a {
+            nav #nav_menu > a {
                 display: block;
                 color: black;
                 padding: 0 15px;
@@ -178,10 +185,10 @@ nav {
                 line-height: 40px;
                 font-size: 1.1rem;
             }
-            nav > div > #nav_menu > a:hover {
+            nav #nav_menu > a:hover {
                 color: var(--purple);
             }
-            nav > div > #nav_menu > #language {
+            nav #nav_menu > #language {
                 padding: 0 15px;
                 display: block;
                 color: black;
@@ -192,24 +199,25 @@ nav {
                 height: 20px;
                 margin-top: 10px;
             }
-                nav > div > #nav_menu > #language > img {
+                nav #nav_menu > #language > img {
                     width: 15px;
                     margin: 2px 0;
                 }
-                nav > div > #nav_menu > #language > span {
+                nav #nav_menu > #language > span {
                     margin: 0 2px;
                     vertical-align: super;
                 }
-            nav > div > #nav_menu > .cta_holder {
+            /* CTA Button */
+            nav #nav_menu > .cta_holder {
                 position: relative;
             }
-                nav > div > #nav_menu > .cta_holder > img {
+                nav #nav_menu > .cta_holder > img {
                     position: absolute;
                     left: 20px;
                     bottom: -40px;
                     width: 40px;
                 }
-                nav > div > #nav_menu > .cta_holder > p {
+                nav #nav_menu > .cta_holder > p {
                     position: absolute;
                     font-family: 'Caveat';
                     font-size: 1.5rem;
@@ -220,3 +228,181 @@ nav {
                     color: var(--sky_blue);
                     transform: rotate(-10deg);
                 }
+            nav #nav_menu > #burger_button {
+                width: 30px;
+                height: 30px;
+                margin: 2px 0 0 15px;
+                display: none;
+            }
+            nav #nav_menu > #burger_button:hover {
+                cursor: pointer;
+            }
+
+#hero {
+    padding: 100px 0;
+}
+    #hero > .row {
+        display: flex;
+    }
+        #hero > .row:first-child > .column {
+            width: 45%;
+            overflow-x: visible;
+        }
+            #hero > .row:first-child > .column > * {
+                margin-bottom: 30px;
+            }
+            /* Hero Title */
+            #hero > .row:first-child > .column > .hero_title {
+                font-size: 4rem;
+                width: 80%;
+                color: var(--navy_blue);
+                line-height: 50px;
+            }
+            /* Hero SubTitle */
+            #hero > .row:first-child > .column > .hero_subtitle {
+                font-size: 1.6rem;
+                width: 55%;
+                color: var(--purple);
+            }
+            /* Hero Description */
+            #hero > .row:first-child > .column > .hero_description {
+                font-size: 1.1rem;
+                font-weight: 500;
+                width: 75%;
+                line-height: 22px;
+            }
+            /* Hero CTA Button */
+            #hero > .row:first-child > .column > .cta_purple {
+                padding: 12px 30px;
+                font-size: 1.3rem;
+            }
+            /* Hero Image */
+            #hero > .row > .column > img {
+                width: 120%;
+            }
+
+/* Tablet/Square Monitor Breakpoint */
+@media (max-width: 1140px) {
+    /* Global */
+    * {
+        font-size: 9px;  
+    }
+    
+    .container {
+        padding: 0px 20px;
+    }
+
+    /* Navigation bar */
+    nav #nav_menu > a {
+        padding: 0px 6px;
+    }
+
+    /* Hero Section */
+    #hero > .row:first-child > .column > * {
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    /* Navigation Menu */
+    nav #nav_menu > a, nav .search_bar { 
+        display: none;
+    }
+    nav #nav_menu > #burger_button {
+        display: block;
+    }
+    .clicked {
+        position: relative;
+        height: auto;
+    }
+        .clicked .search_bar {
+            display: block;
+            position: absolute;
+            top: 430px;
+            height: 55px;
+            border-radius: 10px;
+            z-index: 10;
+            width: 94%;
+            left: 3%;
+        }
+            .clicked .search_bar > img {
+                margin-top: 12px;
+            }
+            .clicked .search_bar > input {
+                margin-top: 1px;
+                padding: 13px 20px;
+                font-size: 2rem;
+                font-weight: 500;
+                width: 88%;
+            }
+        .clicked #nav_menu  {
+            position: absolute;
+            display: block;
+            z-index: 5;
+            width: 100%;
+            text-align: center;
+            flex-direction: row;
+            top: 90px;
+            left: 0px;
+        }
+            .clicked #nav_menu > a {
+                border-top: 1px solid lightgray;
+                border-bottom: 1px solid lightgray;
+                padding: 20px 0px;
+                font-size: 2rem;
+            }
+            .clicked #nav_menu > #language {
+                display: none;
+            }
+            .clicked #nav_menu > .cta_holder {
+                padding: 20px 0px;
+                font-size: 2rem;
+            }
+                .clicked #nav_menu > .cta_holder > button {
+                    width: 95%;
+                    padding: 15px;
+                    font-size: 2rem;
+                    margin-top: 65px;
+                }
+            .clicked #nav_menu > a, .clicked #nav_menu > .search_bar {
+                display: block;
+                z-index: 5;
+                width: 100%;
+            }
+
+        .clicked #nav_menu > #burger_button {
+            position: absolute;
+            top: -65px;
+            right: 20px;
+        }
+
+    /* Hero Section */
+    #hero {
+        padding: 50px 0;
+    }
+    #hero > .row {
+        display: block;
+        width: 100%;
+    }
+        #hero > .row:first-child > .column {
+            width: 100%;
+        }
+            #hero > .row:first-child > .column > * {
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+            }
+            #hero > .row:first-child > .column > .hero_title {
+                width: 100%;
+            }
+            #hero > .row:first-child > .column > .hero_subtitle {
+                width: 100%;
+            }
+            #hero > .row:first-child > .column > .hero_description {
+                width: 70%;
+            }
+        #hero > .row > .column > img {
+            width: 80%;
+        }
+}
