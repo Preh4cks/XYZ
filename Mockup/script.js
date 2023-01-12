@@ -32,3 +32,4 @@ function toggleElements() {
         $('.cta_holder > p, .cta_holder > img').show()
     }
 }
+
