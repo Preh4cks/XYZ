@@ -1,7 +1,5 @@
-
 $(document).ready(() => {
-    // On Screen Resize, Toggle Navbar Elements
-
+    // Burger Clicked
     $('#burger_button').click(() => {
         if (!($('.clicked')[0])) {
             $('nav').addClass('clicked');
@@ -15,6 +13,24 @@ $(document).ready(() => {
     // On Screen Resize, Toggle Navbar Elements
     $(window).on("resize", (event) => {
         toggleElements();
+    });
+
+    // On Dropdown Click, Drop the FAQ's Answer
+    $(".dropdown > h3").click((e) => {
+        // If already clicked
+        let span_text = $(e.target).children("span").text();
+        if (span_text == "⌄") {
+            $(e.target).siblings("p").slideToggle();
+            $(".dropdown > h3").children("span").text("⌃");
+            return;
+        }
+
+        // Reset All
+        $(".dropdown > h3").siblings("p").hide();
+        $(".dropdown > h3").children("span").text("⌃");
+        
+        $(e.target).siblings("p").slideToggle();
+        $(e.target).children("span").text("⌄");
     });
 });
 
