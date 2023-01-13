@@ -55,7 +55,7 @@
     box-sizing: border-box;
     font-family: 'Lexend';
     font-size: 12px;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     text-decoration: none;
     font-family: 'Lexend';
 }
@@ -373,18 +373,18 @@ section > .row {
         }
 
 /* Explore Section */
-.section_2 {
+.slanted_box {
     position: relative;
     overflow: hidden;
 }
-.section_2:before,.section_2:after{
+.slanted_box:before,.slanted_box:after{
     content:"";
     background-color: var(--night_sky);
-    width: 200%;
+    width: 1000%;
     height: 750px;
     position: absolute;
-    top: 40%;
-    left: -10%;
+    top: 45%;
+    left: -500%;
     transform: rotate(-3deg);
     z-index: -1;
 }
@@ -461,6 +461,9 @@ section > .row {
             }
             
 /* Reason Section */
+#reason {
+    margin-bottom: 10%;
+}
 #reason > span {
     color: var(--gold);
     font-size: 1.1rem;
@@ -482,7 +485,7 @@ section > .row {
             width: 30%;
         }
             #reason > .reason_container > .reason_card > img {
-                width: 50px;
+                width: 40px;
                 margin-bottom: 20px;
             }
             #reason > .reason_container > .reason_card > h3 {
@@ -499,13 +502,79 @@ section > .row {
                 font-weight: 500;
             }
 
+/* Testimonial Section */
+#testimonial .text_container {
+    width: max-content;
+    margin: 50px auto 70px auto;
+    text-align: center;
+}
+    #testimonial .text_container > h3 {
+        font-size: 1.6rem;
+        color: var(--navy_blue);
+    }
+    #testimonial .text_container > span {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--sky_blue);
+    }
+        #testimonial .text_container > .logo_container > img {
+            width: 40px;
+            opacity: 0.6;
+        }
+        #testimonial .text_container > .logo_container > span {
+            /* opacity: 0.7; */
+            color: rgb(114, 118, 152);
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px 0px 0px 10px;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+#testimonial .card {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    padding: 60px;
+    background-color: rgb(66, 153, 247);
+    border-radius: 9px;
+}
+#testimonial .card::after {
+    content: '';
+    background-color: rgb(217, 234, 253);
+    position: absolute;
+    z-index: -1;
+    width: 95%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -7%;
+    border-radius: 9px;
+}
+    #testimonial .card > #avatar {
+        width: 70px;
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #testimonial .card > p {
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 500;
+        text-align: center;
+    }
+    #testimonial .card > img:last-child {
+        margin: 40px auto 0px auto;
+        display: block;
+        width: 170px;
+    }
+
 /* Tablet/Square Monitor Breakpoint */
 @media (max-width: 1140px) {
     /* Global */
     * {
         font-size: 9px;  
     }
-    
     .container {
         padding: 0px 20px;
     }
@@ -518,6 +587,11 @@ section > .row {
     /* Hero Section */
     #hero > .row:first-child > .column > * {
         margin-bottom: 10px;
+    }
+
+    /* Reason Section */
+    #reason {
+        margin-bottom: 25%;
     }
 }
 
@@ -627,7 +701,7 @@ section > .row {
             width: 80%;
         }
 
-    /* Section Commitment */
+    /* Commitment Section */
     section > .row {
         flex-direction: column-reverse;
         width: 100%;
@@ -648,7 +722,7 @@ section > .row {
             width: 80%;
         }
 
-    /* Section Clients */
+    /* Clients Section  */
     #clients > .logo_container {
         flex-wrap: wrap;
         justify-content: space-around;
@@ -669,7 +743,7 @@ section > .row {
         padding-bottom: 30px;
     }
 
-    /* Section Explore */
+    /* Explore Section  */
     #explore {
         padding-top: 50px;
     }
@@ -682,11 +756,11 @@ section > .row {
         width: 100px;
     }
 
-    .section_2:before,.section_2:after {
-        top: 24%;
+    .slanted_box:before,.slanted_box:after {
+        top: 25%;
         height: 1000px;
     }
-    /* Section Reason */
+    /* Reason Section  */
     #reason {
         margin-top: 20px;
     }
@@ -717,4 +791,24 @@ section > .row {
             max-width: max-content;
             margin: auto;
         }
+
+    #testimonial .text_container {
+        margin-bottom: 40px;
+    }
+    #testimonial .card {
+        padding: 30px 20px;
+        width: 90%;
+    }
+        #testimonial .card > #avatar {
+            width: 50px;
+            top: -25px;
+        }
+    /* Testemonial Section */
+    #testimonial .card > p {
+        font-size: 1.1rem;
+    }
+    #testimonial .card > img:last-child {
+        margin: 20px auto 0px auto;
+        width: 90px;
+    }
 }

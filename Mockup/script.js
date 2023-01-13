@@ -19,10 +19,10 @@ $(document).ready(() => {
 });
 
 function toggleElements() {
-    if($(window).width() < 768 && !($('.clicked')[0])) {
+    if($(window).width() <= 768 && !($('.clicked')[0])) {
         $('.cta_holder > p, .cta_holder > img').show()
         $('.gradient_background, section, .section_2').show();
-    } else if($(window).width() < 768 && $('.clicked')[0]) {
+    } else if($(window).width() <= 768 && $('.clicked')[0]) {
         $('.gradient_background, section, .section_2').hide();
         $('.clicked').show();
         $('.cta_holder > p, .cta_holder > img').hide()
