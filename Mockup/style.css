@@ -328,7 +328,7 @@ section > .row {
         }
             section > .row > .column > .text-container > h2 {
                 font-size: 2.8rem;
-                font-weight: 500;
+                font-weight: 600;
             }
             section > .row > .column > .text-container > p {
                 font-size: 1.1rem;
@@ -345,12 +345,13 @@ section > .row {
     color: white;
     font-size: 2.8rem;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 40px;
 }
-    #clients > .title > span{
+    #clients > .title > span {
         color: var(--gold);
         font-size: 2.8rem;
+        font-weight: 600;
     }
 #clients > .logo_container {
     display: flex;
@@ -397,6 +398,7 @@ section > .row {
         width: max-content;
         margin-bottom: 30px;
         color: var(--navy_blue);
+        font-weight: 700;
     }
     #explore > .description {
         width: 60%;
@@ -472,7 +474,7 @@ section > .row {
 #reason > h2 {
     color: var(--gold);
     font-size: 2.8rem;
-    font-weight: 500;
+    font-weight: 700;
     color: white;
     margin-top: 10px;
     margin-bottom: 50px;
@@ -510,6 +512,7 @@ section > .row {
 }
     #testimonial .text_container > h3 {
         font-size: 1.6rem;
+        font-weight: 800;
         color: var(--navy_blue);
     }
     #testimonial .text_container > span {
@@ -577,6 +580,7 @@ section > .row {
     .faq h2 {
         font-size: 2.8rem;
         width: 70%;
+        font-weight: 700;
         margin: 0 auto 20px auto;
     }
     .faq .dropdown {
