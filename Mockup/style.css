@@ -594,7 +594,7 @@ section > .row {
     background-color: rgb(66, 153, 247);
     border-radius: 10px;
 }
-#testimonial .card::after {
+#testimonial .card::before {
     content: '';
     background-color: rgb(217, 234, 253);
     position: absolute;
@@ -632,13 +632,14 @@ section > .row {
 }
     .faq h2 {
         font-size: 2.8rem;
-        width: 65%;
+        width: 50%;
         font-weight: 700;
         color: var(--navy_blue);
         margin: 0 auto 20px auto;
     }
     .faq .dropdown {
-        width: 65%;
+        display: block;
+        width: 50%;
         margin: auto;
     }
         .faq .dropdown > h3 {
@@ -651,12 +652,12 @@ section > .row {
             .faq .dropdown > h3 > span {
                 position: absolute;
                 right: 0px;
-                top: 0px;
+                top: 15px;
                 font-size: 2.6rem;
             }
         .faq .dropdown > p {
             display: none;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 500;
             line-height: 22px;
             padding: 10px 0 30px 0;

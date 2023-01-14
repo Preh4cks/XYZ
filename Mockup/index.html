@@ -8,6 +8,36 @@
     <title>XYZ</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./script.js"></script>
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+        
+        !function() {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+            t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+            t.factory = function(e) {
+            return function() {
+                var n = Array.prototype.slice.call(arguments);
+                return n.unshift(e), t.push(n), t;
+            };
+            }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+            }), t.load = function(t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+            };
+        }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('449zh22xnpu5');
+    </script>
+    <!-- End of Async Drift Code -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!-- Discount Banner -->
@@ -65,13 +95,13 @@
             <!-- Hero Section -->
             <main id="hero">
                 <div class="row">
-                    <div class="column">
+                    <div class="column" data-aos="fade-right" data-aos-duration="1600">
                         <h1 class="hero_title">The Cheapest Textbooks</h1>
                         <h3 class="hero_subtitle">Save Up To 90% On Millions Of Titles</h3>
                         <p class="hero_description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
                         <button class="cta_purple">Get Started &gt;</button>
                     </div>
-                    <div class="column">
+                    <div class="column" data-aos="fade-left" data-aos-duration="1600">
                         <img src="../Assets/hero_image.svg" alt="Hero Image" />
                     </div>
                 </div>
@@ -80,11 +110,11 @@
             <!-- Commitment Section -->
             <section id="commitment">
                 <div class="row">
-                    <div class="column">
+                    <div class="column" data-aos="zoom-in-right" data-aos-duration="1600">
                         <img src="../Assets/commitment_image.png" alt="Commitment Image" />
                     </div>
                     <div class="column">
-                        <div class="text-container">
+                        <div class="text-container" data-aos="slide-left" data-aos-duration="1600">
                             <h2>Our Commitment</h2>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum</p>
                             <button class="cta_dark">Learn More &gt;</button>
@@ -94,7 +124,7 @@
             </section>
 
             <!-- Clients Section -->
-            <section id="clients">
+            <section id="clients" data-aos="zoom-out" data-aos-duration="3000">
                 <h2 class="title">Trusted By Awesome <span>Clients<span></h2>
                 <div class="logo_container">
                     <div class="logo">
@@ -132,18 +162,18 @@
             <section id="explore">
                 <h2 class="title">Explore Our Books</h2>
                 <p class="description">With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress.</p>
-                <div class="book_container">
+                <div class="book_container" data-aos="slide-left" data-aos-duration="2000">
                     <div class="book">
                         <img src="../Assets/doughnuts_and_doom_image.png" alt="Doughnuts and Doom Image" />
                         <span>Doughnuts And Doom</span>
                         <a href="#">View Book Detail &gt;</a>
                     </div>
-                    <div class="book">
+                    <div class="book" data-aos="slide-left" data-aos-duration="2500">
                         <img src="../Assets/the_bend_of_luck_book_image.png" alt="The Bend of Luck Image" />
                         <span>The Bend Of Luck</span>
                         <a href="#">View Book Detail &gt;</a>
                     </div>
-                    <div class="book">
+                    <div class="book" data-aos="slide-left" data-aos-duration="3000">
                         <img src="../Assets/the_underwater_welder_image.png" alt="The Underwater Welder" />
                         <span>The Underwater Welder</span>
                         <a href="#">View Book Detail &gt;</a>
@@ -160,17 +190,17 @@
                 <span>LOREM IPSUM</span>
                 <h2>3 Reason To Shop With Us</h2>
                 <div class="reason_container">
-                    <div class="reason_card">
+                    <div class="reason_card" data-aos="slide-right" data-aos-duration="1500">
                         <img src="../Assets/package_icon.svg" alt="Package Icon" />
                         <h3>All textbook rentals come with free return shipping.</h3>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata.</p>
                     </div>
-                    <div class="reason_card">
+                    <div class="reason_card" data-aos="slide-right" data-aos-duration="2000">
                         <img src="../Assets/ask_icon.svg" alt="Ask Icon" />
                         <h3>Dedicated customer support and help portal.</h3>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata.</p>
                     </div>
-                    <div class="reason_card">
+                    <div class="reason_card" data-aos="slide-right" data-aos-duration="2500">
                         <img src="../Assets/piggy_bank_icon.svg" alt="Piggy Bank Icon" />
                         <h3>Buy or rent cheap textbooks & save up to $500 per year!</h3>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata.</p>
@@ -194,7 +224,7 @@
             <div class="card">
                 <img id="avatar" src="../Assets/andrew_santellan_avatar.png" alt="Andrew Santellan" />
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                <img src="../Assets/star_rating_icon.svg" alt="Star Rating Icon" />
+                <img data-aos="flip-right" data-aos-duration="3000" src="../Assets/star_rating_icon.svg" alt="Star Rating Icon" />
             </div>
         </div>
     </section>
@@ -203,19 +233,19 @@
     <section class="faq">
         <div class="container">
             <h2>Frequently Asked Question</h2>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="slide-right" data-aos-duration="1500">
                 <h3>Dedicated customer support and help portal. <span>⌃</span></h3>
                 <p>With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress.</p>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="slide-right" data-aos-duration="2000">
                 <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed <span>⌃</span></h3>
                 <p>With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress.</p>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="slide-right" data-aos-duration="2500">
                 <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed <span>⌃</span></h3>
                 <p>With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress.</p>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="slide-right" data-aos-duration="3000">
                 <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed <span>⌃</span></h3>
                 <p>With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress.</p>
             </div>
@@ -283,5 +313,8 @@
             </div>
         </div>
     </footer>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
