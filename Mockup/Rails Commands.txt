@@ -1,0 +1,13 @@
+rails g controller Home index
+rails g controller Books show
+rails g model Author first_name:string middle_name:string last_name:string
+rails g model Book publisher:references title:string isbn_10:string isbn_13:string price:decimal publication_year:integer image:text edition:string
+rails g model AuthorBook author:references book:references 
+rails g model Publisher first_name:string middle_name:string last_name:string
+
+// Update Models
+// Generate Seeds
+
+rails db:migrate
+rails db:seed
+rails db:migrate
