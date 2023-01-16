@@ -1,0 +1,40 @@
+<!-- Navigation Bar -->
+<nav>
+    <div class="container">
+        <!-- Logo -->
+        <a href="#" class="xyz_logo">
+            <img src="<%= asset_path "xyz_logo.svg" %>" alt="XYZ Logo" />
+            <span>XYZ</span>
+        </a>
+        <!-- Search Bar -->
+        <form action="post" class="search_bar">
+            <img src="<%= asset_path "search_icon.svg" %>" alt="Search Icon" />
+            <input type="text" placeholder="Search">
+        </form>
+        <!-- Navigation Menu -->
+        <div id="nav_menu">
+            <a href="#">Home</a>
+            <a href="/rent">Rent Textbooks</a>
+            <a href="/buy">Buy Textbooks</a>
+            <a href="/sell">Sell Textbooks</a>
+            <!-- Language -->
+            <div id="language">
+                <img src="<%= asset_path "globe_icon.svg" %>" alt="Globe Icon" />
+                <span id="language_sub">En</span>
+                <div class="dropdown-content">
+                    <a href="#">English</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Chinese</a>
+                    <a href="#">German</a>
+                </div>
+            </div>
+            <!-- Contact Button -->
+            <div class="cta_holder">
+                <button class="cta_purple">Contact</button>
+                <img src="<%= asset_path "arrow_icon.svg" %>" alt="Arrow Icon" />
+                <p>Inquire us now to avail discounts!</p>
+            </div>
+            <img id="burger_button" src="<%= asset_path "burger_icon.png" %>" alt="Burger Icon" />
+        </div>
+    </div>
+</nav>
