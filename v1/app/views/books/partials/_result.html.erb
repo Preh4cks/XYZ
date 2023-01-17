@@ -14,7 +14,7 @@
                 <p>Price: <span>PHP <%= sprintf('%.2f', @book.price) %></span></p>
                 <p>ISBN: <span><%= @book.isbn_13 %></span></p>
                 <p>Publication Year: <span><%= @book.publication_year %></span></p>
-                <p>Publisher: <span><%= @book.publisher.first_name %> <%= @book.publisher.last_name %></span></p>
+                <p>Publisher: <span><%= @book.publisher.name %></span></p>
             </div>
         </div>
         <% else %>

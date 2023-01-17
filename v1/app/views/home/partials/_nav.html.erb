@@ -2,19 +2,19 @@
 <nav>
     <div class="container">
         <!-- Logo -->
-        <a href="#" class="xyz_logo">
+        <a href="/" class="xyz_logo">
             <img src="<%= asset_path "xyz_logo.svg" %>" alt="XYZ Logo" />
             <span>XYZ</span>
         </a>
         <!-- Search Bar -->
-        <form action="post" class="search_bar">
+        <form class="search_bar">
             <img src="<%= asset_path "search_icon.svg" %>" alt="Search Icon" />
             <input type="text" placeholder="Search">
         </form>
         <!-- Navigation Menu -->
         <div id="nav_menu">
             <%= link_to 'Home', '/', data: {'js-hide-link' => true} %>
-            <a href="/show/1">Rent Textbooks</a>
+            <a href="/rent">Rent Textbooks</a>
             <a href="/buy">Buy Textbooks</a>
             <a href="/sell">Sell Textbooks</a>
             <!-- Language -->

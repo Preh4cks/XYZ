@@ -3,24 +3,12 @@
     <h2 class="title">Explore Our Books</h2>
     <p class="description">With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress.</p>
     <div class="book_container" data-aos="slide-left" data-aos-duration="1000">
+        <% @book_list.each do |book| %>
         <div class="book">
-            <img src="<%= asset_path "doughnuts_and_doom_image.png" %>" alt="Doughnuts and Doom Image" />
-            <span>Doughnuts And Doom</span>
-            <a href="#">View Book Detail &gt;</a>
+            <img src="<%= asset_path book.image %>" alt="<%= book.title %> Image" />
+            <span><%= book.title %></span>
+            <a href="/show/<%= book.isbn_13 %>">View Book Detail &gt;</a>
         </div>
-        <div class="book" data-aos="slide-left" data-aos-duration="1500">
-            <img src="<%= asset_path "the_bend_of_luck_book_image.png" %>" alt="The Bend of Luck Image" />
-            <span>The Bend Of Luck</span>
-            <a href="#">View Book Detail &gt;</a>
-        </div>
-        <div class="book" data-aos="slide-left" data-aos-duration="2000">
-            <img src="<%= asset_path "the_underwater_welder_image.png" %>" alt="The Underwater Welder" />
-            <span>The Underwater Welder</span>
-            <a href="#">View Book Detail &gt;</a>
-        </div>
-        <div class="tooltip">
-            <img class="arrow" src="<%= asset_path "arrow_icon.svg" %>" alt="Arrow Icon" />
-            <p>Inquire us now to avail discounts!</p>
-        </div>
+        <% end %>
     </div>
 </section>

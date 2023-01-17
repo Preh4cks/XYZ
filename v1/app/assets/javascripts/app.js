@@ -7,6 +7,7 @@ class InitListeners {
         this.#initBurgerClick();
         this.#initOnScreenResize();
         this.#initDropdownClick();
+        this.#initOnSubmitISBN();
     }
 
     /** DOCU: Set Click Listener for Burger Button */
@@ -52,19 +53,27 @@ class InitListeners {
             });
         }
     }
+    
+    #initOnSubmitISBN() {
+        $('.search_bar').submit((e) => {
+            e.preventDefault();
+            let isbn = $('.search_bar > input').val();
+            window.location.href = "/show/" + isbn;
+        });
+    }
 
     /** DOCU: Set Click Listener for Burger Button */
     #toggleElements() {
         if($(window).width() <= 768 && !($('.clicked')[0])) {
             $('.cta_holder > p, .cta_holder > img').show()
-            $('.gradient_background, section, .section_2, footer').show();
+            $('.gradient_background, section, .section_2, footer, #result').show();
         } else if($(window).width() <= 768 && $('.clicked')[0]) {
-            $('.gradient_background, section, .section_2, footer').hide();
+            $('.gradient_background, section, .section_2, footer, #result').hide();
             $('.clicked').show();
             $('.cta_holder > p, .cta_holder > img').hide()
         } else if($(window).width() >= 768 && $('.clicked')[0]) {
             $('.clicked').removeClass('clicked');
-            $('.gradient_background, section, .section_2, footer').show();
+            $('.gradient_background, section, .section_2, footer, #result').show();
             $('.cta_holder > p, .cta_holder > img').show()
         }
     }
