@@ -4,4 +4,5 @@ class Book < ApplicationRecord
   has_many :authors, through: :author_books
 
   validates :title, :isbn_13, :price, :publication_year, :publisher, presence: true
+  validates :isbn_13, uniqueness: true
 end
