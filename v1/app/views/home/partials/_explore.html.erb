@@ -3,12 +3,20 @@
     <h2 class="title">Explore Our Books</h2>
     <p class="description">With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress.</p>
     <div class="book_container" data-aos="slide-left" data-aos-duration="1000">
+        <% counter = 0 %>
         <% @book_list.each do |book| %>
         <div class="book">
             <img src="<%= asset_path book.image %>" alt="<%= book.title %> Image" />
             <span><%= book.title %></span>
             <a href="/show/<%= book.isbn_13 %>">View Book Detail &gt;</a>
         </div>
+        <% if(counter == 2) %>
+        <div class="tooltip">
+            <img class="arrow" src="<%= asset_path "arrow_icon.svg" %>" alt="Arrow Icon">
+            <p>Inquire us now to avail discounts!</p>
+        </div>
+        <% end %>
+        <% counter += 1 %>
         <% end %>
     </div>
 </section>
