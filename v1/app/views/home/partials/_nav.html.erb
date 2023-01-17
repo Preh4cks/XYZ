@@ -9,7 +9,8 @@
         <!-- Search Bar -->
         <form class="search_bar">
             <img src="<%= asset_path "search_icon.svg" %>" alt="Search Icon" />
-            <input type="text" placeholder="Search">
+            <input id="isbn" type="text" name="isbn" placeholder="Search">
+            <input type="submit" style="position: absolute; top: -100px" value="submit_search_bar" />
         </form>
         <!-- Navigation Menu -->
         <div id="nav_menu">
