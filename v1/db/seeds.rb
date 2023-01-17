@@ -4,8 +4,8 @@
 
 # Author Creation
 hartse = Author.create(first_name: "Joel", last_name: "Hartse")
-templer = Author.create(first_name: "Hannah", middle_name: "P.", last_name: "Templer")
-duras = Author.create(first_name: "Marguerite", middle_name: "Z.", last_name: "Duras")
+templer = Author.create(first_name: "Hannah", middle_name: "Pokemon", last_name: "Templer")
+duras = Author.create(first_name: "Marguerite", middle_name: "Zelda", last_name: "Duras")
 amis = Author.create(first_name: "Kingsley", last_name: "Amis")
 flagg = Author.create(first_name: "Fannie", middle_name: "Peters", last_name: "Flagg")
 pagila = Author.create(first_name: "Camille", middle_name: "Byron", last_name: "Pagila")

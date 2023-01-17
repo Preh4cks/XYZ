@@ -1,20 +1,24 @@
 <!-- Main Section -->
 <main id="result">
     <div class="container">
+        <% unless @book.blank? %>
         <h2>Search Result</h2>
         <div class="row">
             <div class="column" data-aos="slide-right" data-aos-duration="1600">
-                <img src="<%= asset_path "doughnuts_and_doom_image.png" %>" alt="Doughnuts And Doom Image" />
+                <img src="<%= asset_path @book.image %>" alt="<%= @book.title %> Image" />
             </div>
             <div class="column" data-aos="slide-left" data-aos-duration="1600">
-                <h1>Doughnuts And Doom</h1>
-                <p id="authors">by Hannah P. Templer, Marguerite Z. Duras, Iceberg Nash Slim, Camille Byron Paglia </p>
-                <p>Edition: <span>Book 3</span></p>
-                <p>Price: <span>PHP 100.00</span></p>
-                <p>ISBN: <span>978-1-603095-13-6</span></p>
-                <p>Publication Year: <span>2022</span></p>
-                <p>Publisher: <span>McSweeney's</span></p>
+                <h1><%= @book.title %></h1>
+                <p id="authors">by <%= @authors  %></p>
+                <p>Edition: <span><%= @book.edition ? @book.edition : "Not Stated" %></span></p>
+                <p>Price: <span>PHP <%= sprintf('%.2f', @book.price) %></span></p>
+                <p>ISBN: <span><%= @book.isbn_13 %></span></p>
+                <p>Publication Year: <span><%= @book.publication_year %></span></p>
+                <p>Publisher: <span><%= @book.publisher.first_name %> <%= @book.publisher.last_name %></span></p>
             </div>
         </div>
+        <% else %>
+        <h2>Invalid ISBN: <span><%= params[:id] ? params[:id] : "NIL" %></span></h2>
+        <% end %>
     </div>
 </main>
